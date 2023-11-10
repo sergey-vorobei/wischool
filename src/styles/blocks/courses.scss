@@ -1,0 +1,111 @@
+.courses {
+  &__header {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__button {
+    position: relative;
+    padding: 8px 16px 8px 50px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: $green-color;
+    border: transparent;
+    border-radius: 50px;
+    color: $white-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      width: 30px;
+      height: 30px;
+      background-image: url("/images/arrow-w.svg");
+      background-size: cover;
+      transform: translateY(-50%);
+      border: transparent;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  &-wrapper {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__course {
+    max-width: 390px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+
+    &-text-section {
+      padding: 24px 24px 28px;
+    }
+
+    &-section-title {
+      display: flex;
+    }
+
+    &-title {
+      margin: 0 0 42px;
+      width: 295px;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 34px;
+      text-transform: capitalize;
+
+      @include onTablet {
+        font-size: 24px;
+        line-height: 20px;
+      }
+    }
+
+    &-description {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-program {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    &-students {
+      &::before {
+        content: "";
+        display: inline-block;
+        background-image: url("/images/students.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 15px;
+        height: 15px;
+        margin: 0 8px 0 16px;
+        scale: 1.3;
+
+        @include onTablet {
+          margin: 0 4px 0 8px;
+        }
+      }
+    }
+
+    &-price {
+      color: $green-color;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+}

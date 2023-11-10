@@ -1,0 +1,15 @@
+{
+  "elementDivider": "__",
+  "ignore": [
+    "node_modules",
+    "dist"
+  ],
+  "rules": {
+    "one-block": false,
+    "one-element": false,
+    "element-inside-parent-block": false,
+    "no-double-element": true,
+    "no-neighbour-parent-block": true,
+    "modifiable-class": true
+  }
+}

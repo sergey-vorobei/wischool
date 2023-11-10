@@ -1,0 +1,73 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
+  @include onTablet {
+    height: 90px;
+    gap: initial;
+  }
+
+  &__nav {
+    position: unset;
+    transition: transform 300ms;
+
+    @include onTablet {
+      transform: translateY(-100%);
+      padding-top: 80px;
+      justify-content: start;
+    }
+
+    &--with-menu {
+      position: absolute;
+      transform: translateY(0);
+    }
+  }
+
+  &__right-side-wrapper {
+    display: flex;
+  }
+
+  &__burger {
+    display: none;
+    width: 34px;
+    margin-right: 12px;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__avatar {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &__search-img {
+    margin-right: 14px;
+    text-align: center;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    gap: 8px;
+
+    @include onTablet {
+      display: none;
+    }
+  }
+}
+
+.logo {
+  @include onTablet {
+    z-index: 1;
+  }
+}

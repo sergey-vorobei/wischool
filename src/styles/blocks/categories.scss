@@ -1,0 +1,103 @@
+.categories {
+  position: relative;
+
+  &__header {
+    margin-bottom: 64px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 32px;
+    font-weight: 600;
+  }
+
+  &__button {
+    padding: 0;
+    margin: 0;
+    width: 80px;
+    color: $gray-color;
+    font-size: 24px;
+    font-weight: 400;
+    background-color: $white-color;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__cards-wrapper {
+    overflow: hidden;
+  }
+
+  &__card {
+    padding-top: 130%;
+    box-sizing: border-box;
+    padding-left: 24px;
+    width: $card-width;
+    height: $card-height;
+    background-color: #09b451;
+    color: $white-color;
+    overflow: hidden;
+    transition: padding-top 300ms ease-in-out;
+
+    &:hover {
+      padding-top: 60%;
+    }
+
+    @for $i from 1 through 4 {
+      &--#{$i} {
+        background-image: url("../images/category-#{$i}.jpg");
+      }
+    }
+
+    &-text-wrapper {
+      bottom: -40%;
+      transition: all 300ms ease-in-out;
+    }
+
+    &-title {
+      margin: 0 0 24px;
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 30px;
+    }
+
+    &-description {
+      margin: 0;
+    }
+  }
+
+  &__slider-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    border: transparent;
+    border-radius: 50%;
+    mask: url("../images/arrow.svg") no-repeat 100% 100%;
+    transition: all 300ms ease-in-out;
+
+    &:hover {
+      background-color: $green-color;
+    }
+
+    &--prev {
+      left: 10px;
+
+      &:hover {
+        background: $white-color;
+      }
+    }
+
+    &--next {
+      right: 10px;
+    }
+  }
+}
+
+.cards__container {
+  display: flex;
+  width: 100%;
+  gap: 32px;
+}
