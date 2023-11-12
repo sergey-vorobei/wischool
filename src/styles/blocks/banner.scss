@@ -4,8 +4,6 @@
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background: linear-gradient(to right, $light-green-color 20%),
-    linear-gradient(to right, $aqua-color 90% 100%);
 
   @include onTablet {
     flex-direction: column;
@@ -13,6 +11,10 @@
 
   &__right-side {
     padding: 59px 0 38px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    max-width: 600px;
   }
 
   &__wrapper {
@@ -37,18 +39,38 @@
     }
   }
 
-  &__img {
+  &__button {
+    padding: 20px 42px;
+  }
+
+  &__img-wrapper {
     position: relative;
-    width: 430px;
-    height: 508px;
+    width: 100%;
+    max-width: 430px;
+
+    @include onTablet {
+      max-width: 260px;
+    }
+  }
+
+  &__img-container {
+    height: 100%;
+    overflow: hidden;
     border-radius: 40px 40px 100px;
-    background-image: url("../images/woman.jpg");
-    transition: background-size 300ms ease-in-out;
+
+    @include onTablet {
+      border-radius: 24.136px 24.136px 60.339px 24.136px;
+    }
+  }
+
+  &__img {
+    height: 100%;
+    background-size: cover;
+    transition: all 300ms ease-in-out;
 
     &:hover {
-      background-position: top;
-      background-repeat: no-repeat;
-      background-size: 120%;
+      transform: scale(1.1);
+      transform-origin: top right;
     }
   }
 
@@ -94,6 +116,7 @@
 
     &--highlight {
       color: $green-color;
+      line-height: normal;
     }
   }
 
@@ -109,6 +132,13 @@
     border-radius: 14px 14px 30px;
     box-shadow: 0 0 69.23px rgba(112, 112, 112, 0.25);
     box-sizing: border-box;
+
+    @include onTablet {
+      padding: 10px 13px 6px;
+      width: 142px;
+      height: 102px;
+      border-radius: 7px 7px 16px;
+    }
   }
 
   &--right {
@@ -133,11 +163,21 @@
     height: 50px;
     border-radius: 50%;
     background-image: url("/images/man.jpg");
+    background-size: contain;
+
+    @include onTablet {
+      width: 27px;
+      height: 27px;
+    }
 
     @for $i from 1 through 6 {
       $width: 15 * $i;
       &--#{$i} {
         left: $width * 1%;
+
+        @include onTablet {
+          left: $width * 0.5%;
+        }
       }
     }
   }

@@ -4,19 +4,29 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 48px;
+
+    @include onTablet {
+      gap: 24px;
+    }
   }
 
   &__item {
-    padding: 10px 17px;
+    height: 54px;
+    min-width: 180px;
+    padding: 0 15px;
     display: flex;
     align-items: center;
     flex-shrink: 0;
     background-color: $aqua-color;
     border-radius: 5px;
+    box-sizing: border-box;
   }
 
   &__item-name {
-    width: max-content;
+
+    @include onTablet {
+      font-size: 14px;
+    }
   }
 
   &__icon {
@@ -25,10 +35,20 @@
     display: flex;
     border-radius: 50%;
     background-color: $green-color;
+
+    @include onTablet {
+      margin-right: 10px;
+      padding: 7px;
+    }
   }
 
   &__svg {
     width: 24px;
     height: 24px;
+
+    @include onTablet {
+      width: 21px;
+      height: 21px;
+    }
   }
 }

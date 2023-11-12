@@ -17,6 +17,10 @@
       transform: translateY(-100%);
       padding-top: 80px;
       justify-content: start;
+
+      &--active {
+        transform: translateY(35%);
+      }
     }
 
     &--with-menu {
@@ -33,6 +37,7 @@
     display: none;
     width: 34px;
     margin-right: 12px;
+    z-index: 1;
 
     @include onTablet {
       display: block;

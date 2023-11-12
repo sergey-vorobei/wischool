@@ -36,10 +36,14 @@ window.addEventListener('DOMContentLoaded', (event) => {
   }
 });
 
-window.addEventListener('hashchange', () => {
-  if (window.location.hash === '.menu') {
-    document.body.classList.add('header__nav--with-menu');
-  } else {
-    document.body.classList.remove('header__nav--with-menu');
-  }
+const nav = document.querySelector('.nav');
+const burger = document.querySelector('#burger');
+const cross = document.querySelector('#nav-cross');
+
+burger.addEventListener('click', function() {
+  nav.classList.toggle('header__nav--active');
+});
+
+cross.addEventListener('click', function() {
+  nav.classList.toggle('header__nav--active');
 });

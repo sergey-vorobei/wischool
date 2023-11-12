@@ -12,6 +12,8 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
       rel="stylesheet"
     >
+    <title>Quality Education By Any Means Necessary.</title>
+    <link rel="icon" href="./images/logo.svg" type="image/x-icon">
   </head>
 
   <body class="page">
@@ -22,6 +24,7 @@
             class="header__burger menu"
             src="images/burger.svg"
             alt="mobile menu button"
+            id="burger"
           >
 
           <div class="logo">
@@ -94,7 +97,7 @@
             </li>
           </ul>
 
-          <a class="nav__cross" href="#"></a>
+          <div class="nav__cross" id="nav-cross"></div>
         </nav>
 
         <div class="header__avatar">
@@ -129,19 +132,32 @@
                   By Any Means Necessary.
                 </h1>
               </div>
-              <button class="button button--main">Get started</button>
+
+              <button class="button button--main banner__button">Get started</button>
             </div>
 
             <div class="banner__right-side">
-              <div class="banner__img">
+              <div class="banner__img-wrapper">
+                <div class="banner__img-container">
+                  <img
+                    class="banner__img"
+                    src="./images/woman.webp"
+                    alt="Woman"
+                  >
+                </div>
+
                 <div class="banner__sticker sticker--left">
                   <h3 class="sticker__title">Learn from best<span class="sticker__title--highlight">instructors</span>around the globe</h3>
 
                   <div class="sticker__img-wrapper">
                     <div class="sticker__img sticker__img--1"></div>
+
                     <div class="sticker__img sticker__img--2"></div>
+
                     <div class="sticker__img sticker__img--3"></div>
+
                     <div class="sticker__img sticker__img--4"></div>
+
                     <div class="sticker__img sticker__img--5"></div>
                   </div>
                 </div>
@@ -227,6 +243,7 @@
         <article class="page__section-categories categories">
           <div class="categories__header">
             <h2 class="categories__subtitle">Choose favourite course from top cartegories</h2>
+
             <button class="categories__button">See All</button>
           </div>
 
@@ -236,6 +253,7 @@
                 <div class="categories__card categories__card--1">
                   <div class="categories__card-text-wrapper">
                     <h3 class="categories__card-title">Marketing</h3>
+
                     <p class="categories__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nibh netus auctor consect massa. Maecen vivamus sed nibh enim sed. Hac ridiculus tellus urna quam odio quis montes, diam. Malesuada ut urna eu faucibus faucibus faucibus u</p>
                   </div>
                 </div>
@@ -245,6 +263,7 @@
                 <div class="categories__card categories__card--2">
                   <div class="categories__card-text-wrapper">
                     <h3 class="categories__card-title">Design</h3>
+
                     <p class="categories__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nibh netus auctor consect massa. Maecen vivamus sed nibh enim sed. Hac ridiculus tellus urna quam odio quis montes, diam. Malesuada ut urna eu faucibus faucibus faucibus u</p>
                   </div>
                 </div>
@@ -254,6 +273,7 @@
                 <div class="categories__card categories__card--3">
                   <div class="categories__card-text-wrapper">
                     <h3 class="categories__card-title">Programming</h3>
+
                     <p class="categories__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nibh netus auctor consect massa. Maecen vivamus sed nibh enim sed. Hac ridiculus tellus urna quam odio quis montes, diam. Malesuada ut urna eu faucibus faucibus faucibus u</p>
                   </div>
                 </div>
@@ -263,6 +283,7 @@
                 <div class="categories__card categories__card--4">
                   <div class="categories__card-text-wrapper">
                     <h3 class="categories__card-title">Technology</h3>
+
                     <p class="categories__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nibh netus auctor consect massa. Maecen vivamus sed nibh enim sed. Hac ridiculus tellus urna quam odio quis montes, diam. Malesuada ut urna eu faucibus faucibus faucibus u</p>
                   </div>
                 </div>
@@ -272,6 +293,7 @@
                 <div class="categories__card categories__card--5">
                   <div class="categories__card-text-wrapper">
                     <h3 class="categories__card-title">Technology</h3>
+
                     <p class="categories__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nibh netus auctor consect massa. Maecen vivamus sed nibh enim sed. Hac ridiculus tellus urna quam odio quis montes, diam. Malesuada ut urna eu faucibus faucibus faucibus u</p>
                   </div>
                 </div>
@@ -281,6 +303,7 @@
                 <div class="categories__card categories__card--6">
                   <div class="categories__card-text-wrapper">
                     <h3 class="categories__card-title">Technology</h3>
+
                     <p class="categories__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nibh netus auctor consect massa. Maecen vivamus sed nibh enim sed. Hac ridiculus tellus urna quam odio quis montes, diam. Malesuada ut urna eu faucibus faucibus faucibus u</p>
                   </div>
                 </div>
@@ -290,20 +313,24 @@
                 <div class="categories__card categories__card--7">
                   <div class="categories__card-text-wrapper">
                     <h3 class="categories__card-title">Technology</h3>
+
                     <p class="categories__card-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quam nibh netus auctor consect massa. Maecen vivamus sed nibh enim sed. Hac ridiculus tellus urna quam odio quis montes, diam. Malesuada ut urna eu faucibus faucibus faucibus u</p>
                   </div>
                 </div>
               </section>
             </div>
+
             <button class="categories__slider-btn categories__slider-btn--prev"></button>
+
             <button class="categories__slider-btn categories__slider-btn--next"></button>
           </div>
         </article>
 
-        <article class="page__section-courses">
+        <article class="page__section-courses" id="courses">
           <div class="courses">
             <div class="courses__header">
               <h2 class="courses__subtitle">Most Popular courses</h2>
+
               <button class="courses__button">
                 Sort by
               </button>
@@ -311,161 +338,166 @@
 
             <div class="courses-wrapper">
               <div class="courses__course">
-                <img src="./images/marketing.jpg" alt="Marketing">
+                <img src="./images/marketing.webp" alt="Marketing">
 
                 <div class="courses__course-text-section">
                   <div class="courses__course-section-title">
                     <span class="courses__course-title">Learn Marketing from Top Instructors.</span>
 
-                    <div>
+                    <div class="courses__course-rating">
                       <img src="./images/star.svg" alt="Rating">
+
                       <span>4.5</span>
                     </div>
                   </div>
 
                   <div class="courses__course-description">
+                    <span class="courses__course-price">30.5$</span>
+
                     <div class="courses__course-program">
                       <span>6 weeks</span>
 
                       <span class="courses__course-students">1.5k Students</span>
                     </div>
-
-                    <span class="courses__course-price">30.5$</span>
                   </div>
                 </div>
               </div>
 
               <div class="courses__course">
-                <img src="./images/frontend.jpg" alt="Front-end">
+                <img src="./images/frontend.webp" alt="Front-end">
 
                 <div class="courses__course-text-section">
                   <div class="courses__course-section-title">
                     <span class="courses__course-title">Front-end development is not hard as you think</span>
 
-                    <div>
+                    <div class="courses__course-rating">
                       <img src="./images/star.svg" alt="Rating">
+
                       <span>4.5</span>
                     </div>
                   </div>
 
                   <div class="courses__course-description">
+                    <span class="courses__course-price">30.5$</span>
+
                     <div class="courses__course-program">
                       <span>6 weeks</span>
 
                       <span class="courses__course-students">1.5k Students</span>
                     </div>
-
-                    <span class="courses__course-price">30.5$</span>
                   </div>
                 </div>
               </div>
 
               <div class="courses__course">
-                <img src="./images/ux.jpg" alt="UX design">
+                <img src="./images/ux.webp" alt="UX design">
 
                 <div class="courses__course-text-section">
                   <div class="courses__course-section-title">
                     <span class="courses__course-title">Everrything you need to know in UX</span>
 
-                    <div>
+                    <div class="courses__course-rating">
                       <img src="./images/star.svg" alt="Rating">
+
                       <span>4.5</span>
                     </div>
                   </div>
 
                   <div class="courses__course-description">
+                    <span class="courses__course-price">30.5$</span>
+
                     <div class="courses__course-program">
                       <span>6 weeks</span>
 
                       <span class="courses__course-students">1.5k Students</span>
                     </div>
-
-                    <span class="courses__course-price">30.5$</span>
                   </div>
                 </div>
               </div>
 
               <div class="courses__course">
-                <img src="./images/photograph.jpg" alt="Photograph">
+                <img src="./images/photograph.webp" alt="Photograph">
 
                 <div class="courses__course-text-section">
                   <div class="courses__course-section-title">
                     <span class="courses__course-title">Learn photography with ease</span>
 
-                    <div>
+                    <div class="courses__course-rating">
                       <img src="./images/star.svg" alt="Rating">
+
                       <span>4.5</span>
                     </div>
                   </div>
 
                   <div class="courses__course-description">
+                    <span class="courses__course-price">30.5$</span>
+
                     <div class="courses__course-program">
                       <span>6 weeks</span>
 
                       <span class="courses__course-students">1.5k Students</span>
                     </div>
-
-                    <span class="courses__course-price">30.5$</span>
                   </div>
                 </div>
               </div>
 
               <div class="courses__course">
-                <img src="./images/data.jpg" alt="Data Analysis">
+                <img src="./images/data.webp" alt="Data Analysis">
 
                 <div class="courses__course-text-section">
                   <div class="courses__course-section-title">
                     <span class="courses__course-title">Be a pro in data analysis</span>
 
-                    <div>
+                    <div class="courses__course-rating">
                       <img src="./images/star.svg" alt="Rating">
+
                       <span>4.5</span>
                     </div>
                   </div>
 
                   <div class="courses__course-description">
+                    <span class="courses__course-price">30.5$</span>
+
                     <div class="courses__course-program">
                       <span>6 weeks</span>
 
                       <span class="courses__course-students">1.5k Students</span>
                     </div>
-
-                    <span class="courses__course-price">30.5$</span>
                   </div>
                 </div>
               </div>
 
               <div class="courses__course">
-                <img src="./images/haking.jpg" alt="Haking">
+                <img src="./images/haking.webp" alt="Haking">
 
                 <div class="courses__course-text-section">
                   <div class="courses__course-section-title">
                     <span class="courses__course-title">Ethical Hacking is not hard as you think</span>
 
-                    <div>
+                    <div class="courses__course-rating">
                       <img src="./images/star.svg" alt="Rating">
+
                       <span>4.5</span>
                     </div>
                   </div>
 
                   <div class="courses__course-description">
+                    <span class="courses__course-price">30.5$</span>
+
                     <div class="courses__course-program">
                       <span>6 weeks</span>
 
                       <span class="courses__course-students">1.5k Students</span>
                     </div>
-
-                    <span class="courses__course-price">30.5$</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </article>
-
       </main>
     </div>
+
     <script src="./scripts/main.js"></script>
   </body>
 </html>
