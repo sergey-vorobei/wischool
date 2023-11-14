@@ -49,7 +49,6 @@ navItems.forEach(function(item) {
 });
 
 // Categories hover
-
 const categories = document.querySelectorAll('.categories__card');
 
 categories.forEach(el => {

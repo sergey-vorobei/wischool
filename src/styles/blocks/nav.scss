@@ -5,15 +5,20 @@
   justify-content: center;
 
   @include onTablet {
-    position: absolute;
-    height: max-content;
-    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: 9;
     &__list {
       flex-direction: column;
     }
   }
 
   &__cross {
+    z-index:10;
     @include onTablet {
       &::after {
         content: "\00d7";
