@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    flex-shrink: 1;
     gap: 48px;
 
     @include onTablet {
@@ -11,9 +12,9 @@
   }
 
   &__item {
+    padding-left: 15px;
     height: 54px;
     min-width: 180px;
-    padding: 0 15px;
     display: flex;
     align-items: center;
     flex-shrink: 0;

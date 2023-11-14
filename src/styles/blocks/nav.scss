@@ -33,44 +33,62 @@
     margin: 0;
     padding: 0;
     display: flex;
+    flex: 1;
+    height: 48px;
     gap: 24px;
     list-style-type: none;
     cursor: pointer;
     overflow: hidden;
 
     @include onTablet {
+      height: 300px;
       gap: 0;
     }
   }
 
-  &__item {
+  &__item-wrapper {
     position: relative;
+    display: flex;
+    flex: auto;
+  }
+
+  &__item {
+    position: absolute;
     width: max-content;
+    bottom: -100%;
+    left: 50%;
     padding: 16px;
+    font-weight: bold;
     cursor: pointer;
-    transition: transform 0.3s;
+    transition: transform 0.5s;
+    transform: translateX(-50%);
 
     &:hover {
-      transform: translateY(-70%);
+      transform: translate(-50%, -100%);
     }
 
-    &::after {
+    @include onTablet {
+      bottom: 0;
+
+      &:hover {
+        transform: translate(-50%, 0);
+      }
+    }
+
+    &::before {
       content: attr(data-title);
       position: absolute;
-      top: 100%;
+      top: -40%;
       left: 50%;
+      padding: 16px;
+      font-weight: normal;
       width: max-content;
-      font-weight: bold;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
       transition: transform 0.3s;
     }
 
     @include onTablet {
-      &:hover {
-        transform: none;
-      }
-
-      &::after {
+      &::before {
         display: none;
       }
     }

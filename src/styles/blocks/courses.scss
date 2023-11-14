@@ -4,6 +4,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include onTablet {
+      margin-bottom: 24px;
+    }
   }
 
   &__button {
@@ -53,22 +57,24 @@
     gap: 32px;
     justify-content: center;
     align-items: flex-start;
-    column-count: 3;
 
+    @include onTablet {
+      gap: 16px;
+    }
   }
 
   &__course {
-    max-width: 390px;
     display: flex;
+    flex-basis: 30%;
     flex-direction: column;
     justify-content: center;
     border-radius: 10px;
-    box-shadow: 0px 0px 20px rgba(203, 203, 203, 0.25);
+    box-shadow: 0 0 20px rgba(203, 203, 203, 0.25);
     overflow: hidden;
 
     @include onTablet {
-      max-width: 208px;
       border-radius: 5px;
+      flex-basis: 48%;
     }
 
     &-text-section {

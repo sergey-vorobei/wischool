@@ -14,6 +14,10 @@
 
   &__section-banner {
     margin-bottom: 84px;
+
+    @include onTablet {
+      margin-bottom: 0;
+    }
   }
 
   &__section-about-us {
@@ -22,6 +26,10 @@
 
   &__section-categories {
     margin-bottom: 98px;
+
+    @include onTablet {
+      margin-bottom: 48px;
+    }
   }
 
   &__section-curses {

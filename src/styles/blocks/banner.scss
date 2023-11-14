@@ -6,6 +6,7 @@
   border-radius: 50px;
 
   @include onTablet {
+    padding-top: 66px;
     flex-direction: column;
   }
 
@@ -134,6 +135,8 @@
       color: $green-color;
       line-height: normal;
     }
+
+    @include onTablet {}
   }
 
   &--left {
@@ -199,7 +202,7 @@
         left: $width * 1%;
 
         @include onTablet {
-          left: $width * 0.5%;
+          left: $width * 1%;
         }
       }
     }

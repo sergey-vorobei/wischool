@@ -29,8 +29,16 @@
     }
   }
 
+  &__left-side-wrapper {
+    display: flex;
+  }
+
   &__right-side-wrapper {
     display: flex;
+
+    @include onTablet {
+      display: none;
+    }
   }
 
   &__burger {
@@ -46,6 +54,7 @@
 
   &__avatar {
     display: none;
+    cursor: pointer;
 
     @include onTablet {
       display: block;
@@ -55,6 +64,7 @@
   &__search-img {
     margin-right: 14px;
     text-align: center;
+    cursor: pointer;
 
     @include onTablet {
       display: none;
