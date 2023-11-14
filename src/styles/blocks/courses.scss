@@ -74,14 +74,14 @@
 
     @include onTablet {
       border-radius: 5px;
-      flex-basis: 48%;
+      flex-basis: 47%;
     }
 
     &-text-section {
       padding: 24px 24px 28px;
 
       @include onTablet {
-        padding: 9px 17px;
+        padding: 9px 13px;
       }
     }
 
