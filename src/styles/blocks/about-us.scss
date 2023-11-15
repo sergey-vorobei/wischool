@@ -1,0 +1,55 @@
+.about-us {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    gap: 48px;
+
+    @include onTablet {
+      gap: 24px;
+    }
+  }
+
+  &__item {
+    padding: 15px;
+    height: 54px;
+    min-width: 180px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: $aqua-color;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  &__item-name {
+
+    @include onTablet {
+      font-size: 14px;
+    }
+  }
+
+  &__icon {
+    margin-right: 12px;
+    padding: 8px;
+    display: flex;
+    border-radius: 50%;
+    background-color: $green-color;
+
+    @include onTablet {
+      margin-right: 10px;
+      padding: 7px;
+    }
+  }
+
+  &__svg {
+    width: 24px;
+    height: 24px;
+
+    @include onTablet {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
