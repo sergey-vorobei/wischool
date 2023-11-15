@@ -61,3 +61,66 @@ categories.forEach(el => {
       .remove('categories__card-text-wrapper--active');
   });
 });
+
+const inputs = document.querySelectorAll('.popup__field');
+
+for (const el of inputs) {
+  el.insertAdjacentHTML('beforebegin', `
+    <label class="popup__label" for="${el.id}">
+      ${normalize(el.name)}
+    </label>
+  `);
+  el.placeholder = normalize(el.name);
+}
+
+function normalize(item) {
+  const word = item.split(/(?=[A-Z])/).join(' ');
+
+  return word[0].toUpperCase() + word.slice(1);
+}
+
+// Login popup
+
+document.addEventListener('DOMContentLoaded', function() {
+  const loginButton = document.getElementById('loginButton');
+  const loginPopup = document.getElementById('loginPopup');
+  const closePopup = document.getElementById('closePopup');
+  const loginForm = document.getElementById('loginForm');
+
+  loginButton.addEventListener('click', function() {
+    loginPopup.style.display = 'flex';
+  });
+
+  closePopup.addEventListener('click', function() {
+    loginPopup.style.display = 'none';
+  });
+
+  loginForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    loginForm.reset();
+    loginPopup.style.display = 'none';
+  });
+});
+
+// Register popup
+
+document.addEventListener('DOMContentLoaded', function() {
+  const registerButton = document.getElementById('registerButton');
+  const registerPopup = document.getElementById('registerPopup');
+  const closeRegisterPopup = document.getElementById('closeRegisterPopup');
+  const registerForm = document.getElementById('registerForm');
+
+  registerButton.addEventListener('click', function() {
+    registerPopup.style.display = 'flex';
+  });
+
+  closeRegisterPopup.addEventListener('click', function() {
+    registerPopup.style.display = 'none';
+  });
+
+  registerForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+    registerForm.reset();
+    registerPopup.style.display = 'none';
+  });
+});
