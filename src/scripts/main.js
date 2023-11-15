@@ -1,7 +1,6 @@
 'use strict';
 
 /* global Swiper */
-
 document.addEventListener('DOMContentLoaded', function() {
   // eslint-disable-next-line no-new
   new Swiper('.categories__swiper', {
@@ -79,13 +78,25 @@ function normalize(item) {
   return word[0].toUpperCase() + word.slice(1);
 }
 
-// Login popup
+function removeError() {
+  const previousErrorMessage = document.querySelector('.popup__errorMessage');
 
+  if (previousErrorMessage) {
+    previousErrorMessage.remove();
+  }
+};
+
+// Login popup
 document.addEventListener('DOMContentLoaded', function() {
   const loginButton = document.getElementById('loginButton');
   const loginPopup = document.getElementById('loginPopup');
   const closePopup = document.getElementById('closePopup');
   const loginForm = document.getElementById('loginForm');
+  const fields = document.querySelectorAll('#loginForm input');
+  const additionalBlock = document.createElement('div');
+
+  additionalBlock.className = 'popup__errorMessage';
+  additionalBlock.textContent = 'Enter all fields';
 
   loginButton.addEventListener('click', function() {
     loginPopup.style.display = 'flex';
@@ -97,30 +108,54 @@ document.addEventListener('DOMContentLoaded', function() {
 
   loginForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    loginForm.reset();
-    loginPopup.style.display = 'none';
+
+    if (Array.from(fields).some(el => !el.value.trim())) {
+      loginForm.appendChild(additionalBlock);
+
+      setTimeout(() => {
+        removeError();
+      }, 2000);
+    } else {
+      loginForm.reset();
+      loginPopup.style.display = 'none';
+    }
   });
 });
 
 // Register popup
-
 document.addEventListener('DOMContentLoaded', function() {
   const registerButton = document.getElementById('registerButton');
   const registerPopup = document.getElementById('registerPopup');
   const closeRegisterPopup = document.getElementById('closeRegisterPopup');
   const registerForm = document.getElementById('registerForm');
+  const fields = document.querySelectorAll('#registerForm input');
+  const additionalBlock = document.createElement('div');
+
+  additionalBlock.className = 'popup__errorMessage';
+  additionalBlock.textContent = 'Enter all fields';
 
   registerButton.addEventListener('click', function() {
     registerPopup.style.display = 'flex';
+    removeError();
   });
 
   closeRegisterPopup.addEventListener('click', function() {
     registerPopup.style.display = 'none';
+    removeError();
   });
 
   registerForm.addEventListener('submit', function(event) {
     event.preventDefault();
-    registerForm.reset();
-    registerPopup.style.display = 'none';
+
+    if (Array.from(fields).some(el => !el.value.trim())) {
+      registerForm.appendChild(additionalBlock);
+
+      setTimeout(() => {
+        removeError();
+      }, 2000);
+    } else {
+      registerForm.reset();
+      registerPopup.style.display = 'none';
+    }
   });
 });
