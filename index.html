@@ -84,13 +84,11 @@
       <img class="header__search-img" src="/search.48f4844e.svg" alt="search">
 
       <div class="header__buttons-wrapper">
-        <button class="button button--login">Login</button>
+        <button id="loginButton" class="button button--login">Login</button>
 
-        <button class="button button--main">Register</button>
+        <button id="registerButton" class="button button--main">Register</button>
       </div>
     </div>
-<!--    <div>-->
-<!--    </div>-->
   </header>
 
   <main class="main">
@@ -453,6 +451,53 @@
       </div>
     </article>
   </main>
+</div>
+
+<div id="loginPopup" class="popup">
+  <div class="popup__content">
+    <h2>Login</h2>
+
+    <form method="POST" action="" class="popup__form" id="loginForm">
+      <input class="popup__field" type="text" id="username" name="username" required="">
+
+      <input class="popup__field" type="password" id="password" name="password" required="">
+
+      <div class="popup__button-wrapper">
+        <button class="button button--main" type="submit">
+          Login
+        </button>
+
+        <button class="close button button--main" id="closePopup" type="reset">
+          Close
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div id="registerPopup" class="popup">
+  <div class="popup__content">
+    <h2>Registration form</h2>
+
+    <form method="post" action="" class="popup__form" id="registerForm">
+      <input class="popup__field" type="text" id="firstName" name="firstName" required="">
+
+      <input class="popup__field" type="text" id="lastName" name="lastName" required="">
+
+      <input class="popup__field" type="email" id="email" name="email" required="">
+
+      <input class="popup__field" type="password" id="password1" name="password" required="">
+      <div class="popup__button-wrapper">
+        <button class="button button--main" type="submit">
+          Login
+        </button>
+
+        <button class="close button button--main" id="closeRegisterPopup" type="reset">
+          Close
+        </button>
+      </div>
+    </form>
+  </div>
 </div>
 
 <script src="/main.d8ebb8d6.js"></script>
